@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Book Appointment - MedCare</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
+
+    <header class="main-header">
+
+        <a
+            href="dashboard.html"
+            class="logo"
+        >
+            MedCare
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="doctors.html">
+                Find Doctors
+            </a>
+
+            <a href="#">
+                Appointments
+            </a>
+
+            <a href="#">
+                Medical Records
+            </a>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         MAIN
+    =========================================== -->
+
+    <main class="booking-page">
+
+
+        <!-- BACK -->
+
+        <a
+            href="doctors.html"
+            class="back-doctors"
+        >
+            ← Back to Doctors
+        </a>
+
+
+
+        <div class="booking-layout">
+
+
+            <!-- ======================================
+                 LEFT - FORM
+            ======================================= -->
+
+            <section class="booking-form-card">
+
+
+                <div class="booking-heading">
+
+                    <p class="page-label">
+                        APPOINTMENT
+                    </p>
+
+                    <h1>
+                        Book an Appointment
+                    </h1>
+
+                    <p>
+                        Choose a date and time that
+                        works best for you.
+                    </p>
+
+                </div>
+
+
+
+                <form id="appointmentForm">
+
+
+                    <!-- DATE -->
+
+                    <div class="booking-field">
+
+                        <label for="appointmentDate">
+                            Select Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="appointmentDate"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- TIME -->
+
+                    <div class="booking-field">
+
+                        <label for="appointmentTime">
+                            Select Time
+                        </label>
+
+                        <select
+                            id="appointmentTime"
+                            required
+                        >
+
+                            <option value="">
+                                Select a time
+                            </option>
+
+                            <option value="09:00 AM">
+                                09:00 AM
+                            </option>
+
+                            <option value="10:00 AM">
+                                10:00 AM
+                            </option>
+
+                            <option value="11:00 AM">
+                                11:00 AM
+                            </option>
+
+                            <option value="12:00 PM">
+                                12:00 PM
+                            </option>
+
+                            <option value="02:00 PM">
+                                02:00 PM
+                            </option>
+
+                            <option value="03:00 PM">
+                                03:00 PM
+                            </option>
+
+                            <option value="04:00 PM">
+                                04:00 PM
+                            </option>
+
+                            <option value="05:00 PM">
+                                05:00 PM
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- APPOINTMENT TYPE -->
+
+                    <div class="booking-field">
+
+                        <label>
+                            Appointment Type
+                        </label>
+
+
+                        <div class="appointment-types">
+
+
+                            <label class="appointment-type">
+
+                                <input
+                                    type="radio"
+                                    name="appointmentType"
+                                    value="Video Consultation"
+                                    required
+                                >
+
+                                <span>
+                                    Video Consultation
+                                </span>
+
+                            </label>
+
+
+                            <label class="appointment-type">
+
+                                <input
+                                    type="radio"
+                                    name="appointmentType"
+                                    value="In-Person Visit"
+                                >
+
+                                <span>
+                                    In-Person Visit
+                                </span>
+
+                            </label>
+
+
+                            <label class="appointment-type">
+
+                                <input
+                                    type="radio"
+                                    name="appointmentType"
+                                    value="Phone Consultation"
+                                >
+
+                                <span>
+                                    Phone Consultation
+                                </span>
+
+                            </label>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- REASON -->
+
+                    <div class="booking-field">
+
+                        <label for="appointmentReason">
+                            Reason for Visit
+                        </label>
+
+                        <textarea
+                            id="appointmentReason"
+                            rows="4"
+                            placeholder="Briefly describe the reason for your appointment..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="confirm-booking-btn"
+                    >
+                        Confirm Appointment
+                    </button>
+
+
+                </form>
+
+            </section>
+
+
+
+            <!-- ======================================
+                 RIGHT - DOCTOR SUMMARY
+            ======================================= -->
+
+            <aside class="booking-summary-card">
+
+
+                <h2>
+                    Appointment Summary
+                </h2>
+
+
+                <div class="booking-doctor">
+
+                    <img
+                        id="bookingDoctorImage"
+                        src=""
+                        alt="Doctor"
+                    >
+
+
+                    <div>
+
+                        <h3 id="bookingDoctorName">
+                            Doctor Name
+                        </h3>
+
+                        <p id="bookingDoctorSpecialty">
+                            Specialty
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="summary-divider">
+                </div>
+
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Consultation Fee
+                    </span>
+
+                    <strong id="bookingDoctorFee">
+                        $0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Appointment Type
+                    </span>
+
+                    <strong id="summaryType">
+                        Not selected
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Date
+                    </span>
+
+                    <strong id="summaryDate">
+                        Not selected
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Time
+                    </span>
+
+                    <strong id="summaryTime">
+                        Not selected
+                    </strong>
+
+                </div>
+
+
+            </aside>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="main-footer">
+
+        <p>
+            © 2026 MedCare. All rights reserved.
+        </p>
+
+        <p>
+            Demo Medical Platform
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

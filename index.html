@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Create Account - MedCare</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="auth-page">
+
+
+    <!-- ==========================================
+         AUTH HEADER
+    =========================================== -->
+
+    <header class="auth-header">
+
+        <a
+            href="index.html"
+            class="auth-logo"
+        >
+            MedCare
+        </a>
+
+        <a
+            href="login.html"
+            class="auth-header-link"
+        >
+            Already have an account?
+            <strong>Login</strong>
+        </a>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         REGISTER AREA
+    =========================================== -->
+
+    <main class="auth-container">
+
+
+        <!-- LEFT SIDE -->
+
+        <section class="auth-intro">
+
+            <p class="auth-badge">
+                YOUR HEALTHCARE PARTNER
+            </p>
+
+            <h1>
+                Better healthcare
+                starts with the
+                right connection.
+            </h1>
+
+            <p class="auth-description">
+                Create your MedCare account and
+                connect with qualified healthcare
+                professionals from anywhere.
+            </p>
+
+
+            <div class="auth-features">
+
+                <div class="auth-feature">
+
+                    <span>
+                        ✓
+                    </span>
+
+                    <p>
+                        Find qualified doctors
+                    </p>
+
+                </div>
+
+
+                <div class="auth-feature">
+
+                    <span>
+                        ✓
+                    </span>
+
+                    <p>
+                        Manage appointments
+                    </p>
+
+                </div>
+
+
+                <div class="auth-feature">
+
+                    <span>
+                        ✓
+                    </span>
+
+                    <p>
+                        Access your healthcare information
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- RIGHT SIDE -->
+
+        <section class="auth-form-wrapper">
+
+            <div class="auth-card-new">
+
+                <div class="auth-card-header">
+
+                    <h2>
+                        Create your account
+                    </h2>
+
+                    <p>
+                        Enter your details to get started.
+                    </p>
+
+                </div>
+
+
+                <form id="registerForm">
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="John Smith"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="john@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="password-wrapper">
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="registerPasswordToggle"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TERMS -->
+
+                    <div class="terms-row">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        <label for="terms">
+
+                            I agree to the
+                            <a href="#">
+                                Terms of Service
+                            </a>
+                            and
+                            <a href="#">
+                                Privacy Policy
+                            </a>
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- REGISTER -->
+
+                    <button
+                        type="submit"
+                        class="auth-submit"
+                    >
+                        Create Account
+                    </button>
+
+
+                </form>
+
+
+                <div class="auth-divider">
+
+                    <span>
+                        OR
+                    </span>
+
+                </div>
+
+
+                <p class="auth-bottom-text">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login here
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="auth-footer">
+
+        <p>
+            © 2026 MedCare. Demo Medical Platform.
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

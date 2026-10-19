@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Appointment Details - MedCare</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
+
+    <header class="main-header">
+
+        <a
+            href="dashboard.html"
+            class="logo"
+        >
+            MedCare
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="doctors.html">
+                Find Doctors
+            </a>
+
+            <a
+                href="appointments.html"
+                class="active-nav"
+            >
+                Appointments
+            </a>
+
+            <a href="#">
+                Medical Records
+            </a>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         MAIN
+    =========================================== -->
+
+    <main class="appointment-details-page">
+
+
+        <!-- BACK BUTTON -->
+
+        <a
+            href="appointments.html"
+            class="back-appointments"
+        >
+            ← Back to Appointments
+        </a>
+
+
+
+        <!-- PAGE HEADER -->
+
+        <div class="appointment-details-header">
+
+            <div>
+
+                <p class="page-label">
+                    APPOINTMENT DETAILS
+                </p>
+
+                <h1>
+                    Appointment Details
+                </h1>
+
+                <p>
+                    Review your appointment information.
+                </p>
+
+            </div>
+
+
+            <span
+                id="appointmentStatus"
+                class="appointment-status"
+            >
+                Upcoming
+            </span>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             APPOINTMENT CONTENT
+        =========================================== -->
+
+        <div class="appointment-details-layout">
+
+
+            <!-- ======================================
+                 LEFT SIDE
+            ======================================= -->
+
+            <section class="appointment-details-main">
+
+
+                <!-- DOCTOR CARD -->
+
+                <div class="details-card doctor-details-card">
+
+                    <div class="details-card-title">
+
+                        <h2>
+                            Doctor Information
+                        </h2>
+
+                    </div>
+
+
+                    <div class="details-doctor">
+
+                        <img
+                            id="detailsDoctorImage"
+                            src=""
+                            alt="Doctor"
+                        >
+
+
+                        <div>
+
+                            <h3 id="detailsDoctorName">
+                                Doctor Name
+                            </h3>
+
+                            <p id="detailsDoctorSpecialty">
+                                Specialty
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- APPOINTMENT INFORMATION -->
+
+                <div class="details-card">
+
+                    <div class="details-card-title">
+
+                        <h2>
+                            Appointment Information
+                        </h2>
+
+                    </div>
+
+
+                    <div class="details-grid">
+
+
+                        <div class="details-item">
+
+                            <span>
+                                Date
+                            </span>
+
+                            <strong id="detailsDate">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="details-item">
+
+                            <span>
+                                Time
+                            </span>
+
+                            <strong id="detailsTime">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="details-item">
+
+                            <span>
+                                Appointment Type
+                            </span>
+
+                            <strong id="detailsType">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="details-item">
+
+                            <span>
+                                Consultation Fee
+                            </span>
+
+                            <strong id="detailsFee">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- REASON FOR VISIT -->
+
+                <div class="details-card">
+
+                    <div class="details-card-title">
+
+                        <h2>
+                            Reason for Visit
+                        </h2>
+
+                    </div>
+
+
+                    <p
+                        id="detailsReason"
+                        class="appointment-reason"
+                    >
+                        -
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ======================================
+                 RIGHT SIDE
+            ======================================= -->
+
+            <aside class="appointment-details-sidebar">
+
+
+                <!-- STATUS CARD -->
+
+                <div class="details-card">
+
+                    <div class="details-card-title">
+
+                        <h2>
+                            Appointment Status
+                        </h2>
+
+                    </div>
+
+
+                    <div class="status-display">
+
+                        <span
+                            id="detailsStatus"
+                            class="appointment-status"
+                        >
+                            Upcoming
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ACTION CARD -->
+
+                <div class="details-card">
+
+                    <div class="details-card-title">
+
+                        <h2>
+                            Actions
+                        </h2>
+
+                    </div>
+
+
+                    <div class="details-actions">
+
+                        <button
+                            id="cancelAppointmentBtn"
+                            class="details-cancel-btn"
+                        >
+                            Cancel Appointment
+                        </button>
+
+
+                        <a
+                            href="appointments.html"
+                            class="details-back-btn"
+                        >
+                            Back to Appointments
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="main-footer">
+
+        <p>
+            © 2026 MedCare. All rights reserved.
+        </p>
+
+        <p>
+            Demo Medical Platform
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

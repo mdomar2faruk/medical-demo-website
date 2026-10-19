@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Appointments - MedCare</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
+
+    <header class="main-header">
+
+        <a
+            href="dashboard.html"
+            class="logo"
+        >
+            MedCare
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="doctors.html">
+                Find Doctors
+            </a>
+
+            <a
+                href="appointments.html"
+                class="active-nav"
+            >
+                Appointments
+            </a>
+
+            <a href="#">
+                Medical Records
+            </a>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         MAIN
+    =========================================== -->
+
+    <main class="appointments-page">
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="appointments-header">
+
+            <div>
+
+                <p class="page-label">
+                    APPOINTMENTS
+                </p>
+
+                <h1>
+                    My Appointments
+                </h1>
+
+                <p>
+                    Manage your upcoming and previous
+                    medical appointments.
+                </p>
+
+            </div>
+
+
+            <a
+                href="doctors.html"
+                class="find-doctor-btn"
+            >
+                Find a Doctor
+            </a>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             APPOINTMENT TABS
+        =========================================== -->
+
+        <div class="appointment-tabs">
+
+            <button
+                class="appointment-tab active"
+                data-tab="upcoming"
+            >
+                Upcoming
+            </button>
+
+            <button
+                class="appointment-tab"
+                data-tab="completed"
+            >
+                Completed
+            </button>
+
+            <button
+                class="appointment-tab"
+                data-tab="cancelled"
+            >
+                Cancelled
+            </button>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             APPOINTMENTS CONTAINER
+        =========================================== -->
+
+        <section
+            id="appointmentsContainer"
+            class="appointments-container"
+        >
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="main-footer">
+
+        <p>
+            © 2026 MedCare. All rights reserved.
+        </p>
+
+        <p>
+            Demo Medical Platform
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

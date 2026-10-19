@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard - MedCare</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
+
+    <header class="main-header">
+
+        <div class="logo">
+            MedCare
+        </div>
+
+
+        <nav class="main-nav">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="doctors.html">
+                Find Doctors
+            </a>
+
+            <a href="prescriptions.html">
+                Appointments
+            </a>
+
+            <a href="medical-records.html">
+                Medical Records
+            </a>
+
+             <a href="prescriptions.html">
+                Prescriptions
+             </a>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         MAIN DASHBOARD
+    =========================================== -->
+
+    <main class="dashboard-container">
+
+
+        <!-- ==========================================
+             WELCOME SECTION
+        =========================================== -->
+
+        <section class="welcome-section">
+
+            <div>
+
+                <p class="welcome-label">
+                    Patient Dashboard
+                </p>
+
+                <h1>
+                    Welcome back,
+                    <span id="userName">
+                        User
+                    </span>
+                </h1>
+
+                <p>
+                    Manage your healthcare,
+                    appointments and medical
+                    information in one place.
+                </p>
+
+            </div>
+
+
+            <div class="profile-avatar">
+
+                <span id="avatarLetter">
+                    U
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             QUICK ACTIONS
+        =========================================== -->
+
+        <section class="quick-actions">
+
+            <div class="section-heading">
+
+                <h2>
+                    Quick Actions
+                </h2>
+
+            </div>
+
+
+            <div class="action-grid">
+
+
+                <div class="action-card">
+
+                    <div class="action-icon">
+                        +
+                    </div>
+
+                    <h3>
+                        Find a Doctor
+                    </h3>
+
+                    <p>
+                        Find qualified doctors
+                        based on specialty.
+                    </p>
+
+                    <a
+                    href="doctors.html"
+                    class="dashboard-action-button"
+                    >
+                    Find Doctors
+                   </a>
+
+                   
+                </div>
+
+
+
+                <div class="action-card">
+
+                    <div class="action-icon">
+                        📅
+                    </div>
+
+                    <h3>
+                        Book Appointment
+                    </h3>
+
+                    <p>
+                        Schedule an appointment
+                        with a doctor.
+                    </p>
+
+                 <a
+                      href="doctors.html"
+                     class="dashboard-action-button"
+                     >
+                     Book Now
+                 </a>
+
+                </div>
+
+                <div class="action-card">
+
+                    <div class="action-icon">
+                        📋
+                    </div>
+
+                    <h3>
+                        Medical Records
+                    </h3>
+
+                    <p>
+                        View your medical
+                        records and history.
+                    </p>
+
+                    <a
+                    href="medical-records.html"
+                    class="dashboard-action-button"
+                 >
+                    View Records
+                 </a>   
+
+                </div>
+
+                <div class="action-card">
+                    <div class="action-icon">
+                     💊
+                    </div>
+                    <h3>
+                        Prescriptions
+                    </h3>
+                     <p>
+                        Check your current
+                        prescriptions.
+                     </p>
+
+                    <a
+                    href="prescriptions.html"
+                    class="dashboard-action-button"
+                >
+                   View Prescriptions
+                   </a>
+
+                </div>
+
+          </div>
+
+    </section>
+
+
+
+       <section class="dashboard-content">
+
+
+    <!-- ======================================
+         ACCOUNT
+    ======================================= -->
+
+    <div class="dashboard-panel">
+
+        <div class="panel-header">
+
+            <h2>
+                Account Information
+            </h2>
+
+            <a
+                href="profile.html"
+                class="panel-view-all"
+            >
+                Edit Profile
+            </a>
+
+        </div>
+
+
+        <div class="account-info">
+
+            <div class="info-item">
+
+                <span>
+                    Full Name
+                </span>
+
+                <strong id="dashboardName">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    Email Address
+                </span>
+
+                <strong id="dashboardEmail">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    Account Type
+                </span>
+
+                <strong>
+                    Patient
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    Account Status
+                </span>
+
+                <strong class="status">
+                    Active
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ======================================
+         UPCOMING APPOINTMENTS
+    ======================================= -->
+
+    <div class="dashboard-panel">
+
+        <div class="panel-header">
+
+            <h2>
+                Upcoming Appointments
+            </h2>
+
+            <a
+                href="appointments.html"
+                class="panel-view-all"
+            >
+                View All
+            </a>
+
+        </div>
+
+
+        <div
+            id="dashboardAppointments"
+            class="dashboard-appointments"
+        >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ======================================
+         HEALTH OVERVIEW
+    ======================================= -->
+
+    <div class="dashboard-panel">
+
+        <div class="panel-header">
+
+            <h2>
+                Health Overview
+            </h2>
+
+        </div>
+
+
+        <div class="health-grid">
+
+
+            <div class="health-item">
+
+                <span>
+                    Blood Pressure
+                </span>
+
+                <strong>
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="health-item">
+
+                <span>
+                    Heart Rate
+                </span>
+
+                <strong>
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="health-item">
+
+                <span>
+                    Weight
+                </span>
+
+                <strong>
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="health-item">
+
+                <span>
+                    Temperature
+                </span>
+
+                <strong>
+                    --
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</section>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="main-footer">
+
+        <p>
+            © 2026 MedCare. All rights reserved.
+        </p>
+
+        <p>
+            Demo Medical Platform
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

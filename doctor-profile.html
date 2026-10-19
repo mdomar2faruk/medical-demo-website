@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Doctor Profile - MedCare</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
+
+    <header class="main-header">
+
+        <a
+            href="dashboard.html"
+            class="logo"
+        >
+            MedCare
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="doctors.html">
+                Find Doctors
+            </a>
+
+            <a href="#">
+                Appointments
+            </a>
+
+            <a href="#">
+                Medical Records
+            </a>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         MAIN
+    =========================================== -->
+
+    <main class="doctor-profile-page">
+
+
+        <!-- ==========================================
+             BACK LINK
+        =========================================== -->
+
+        <a
+            href="doctors.html"
+            class="back-doctors"
+        >
+            ← Back to Doctors
+        </a>
+
+
+
+        <!-- ==========================================
+             PROFILE HERO
+        =========================================== -->
+
+        <section class="doctor-profile-hero">
+
+
+            <div class="profile-main">
+
+
+                <img
+                    id="profileImage"
+                    src=""
+                    alt="Doctor"
+                    class="profile-doctor-image"
+                >
+
+
+                <div class="profile-main-info">
+
+                    <div class="verified-badge">
+                        ✓ Verified Doctor
+                    </div>
+
+
+                    <h1 id="profileName">
+                        Doctor Name
+                    </h1>
+
+
+                    <p
+                        id="profileSpecialty"
+                        class="profile-specialty"
+                    >
+                        Specialty
+                    </p>
+
+
+                    <div class="profile-rating">
+
+                        <span>
+                            ⭐
+                        </span>
+
+                        <strong id="profileRating">
+                            4.9
+                        </strong>
+
+                        <span>
+                            Patient Rating
+                        </span>
+
+                    </div>
+
+
+                    <div class="profile-location">
+
+                        📍
+
+                        <span id="profileLocation">
+                            Location
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-booking">
+
+                <p>
+                    Consultation Fee
+                </p>
+
+
+                <h2 id="profileFee">
+                    $120
+                </h2>
+
+
+                <button
+                    id="bookAppointmentBtn"
+                    class="book-appointment-btn"
+                >
+                    Book Appointment
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             PROFILE CONTENT
+        =========================================== -->
+
+        <section class="profile-content">
+
+
+            <!-- ======================================
+                 LEFT COLUMN
+            ======================================= -->
+
+            <div class="profile-left">
+
+
+                <!-- ABOUT -->
+
+                <div class="profile-panel">
+
+                    <h2>
+                        About Doctor
+                    </h2>
+
+                    <p id="profileAbout">
+                        Doctor information will appear here.
+                    </p>
+
+                </div>
+
+
+
+                <!-- EXPERIENCE -->
+
+                <div class="profile-panel">
+
+                    <h2>
+                        Professional Experience
+                    </h2>
+
+                    <div class="experience-box">
+
+                        <strong id="profileExperience">
+                            15 Years
+                        </strong>
+
+                        <span>
+                            of medical experience
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EDUCATION -->
+
+                <div class="profile-panel">
+
+                    <h2>
+                        Education
+                    </h2>
+
+                    <ul id="profileEducation">
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- CERTIFICATIONS -->
+
+                <div class="profile-panel">
+
+                    <h2>
+                        Certifications
+                    </h2>
+
+                    <ul id="profileCertifications">
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- LANGUAGES -->
+
+                <div class="profile-panel">
+
+                    <h2>
+                        Languages
+                    </h2>
+
+                    <div
+                        id="profileLanguages"
+                        class="language-list"
+                    >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- REVIEWS -->
+
+                <div class="profile-panel">
+
+                    <div class="reviews-header">
+
+                        <h2>
+                            Patient Reviews
+                        </h2>
+
+                        <span>
+                            ⭐
+                            <strong>
+                                <span id="reviewRating">
+                                    4.9
+                                </span>
+                            </strong>
+                        </span>
+
+                    </div>
+
+
+                    <div id="reviewsContainer">
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ======================================
+                 RIGHT COLUMN
+            ======================================= -->
+
+            <aside class="profile-right">
+
+
+                <!-- AVAILABILITY -->
+
+                <div class="profile-panel">
+
+                    <h2>
+                        Availability
+                    </h2>
+
+
+                    <div
+                        id="availabilityContainer"
+                        class="availability-list"
+                    >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUICK INFO -->
+
+                <div class="profile-panel">
+
+                    <h2>
+                        Quick Information
+                    </h2>
+
+
+                    <div class="quick-info-list">
+
+                        <div>
+
+                            <span>
+                                Specialty
+                            </span>
+
+                            <strong id="quickSpecialty">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Experience
+                            </span>
+
+                            <strong id="quickExperience">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Location
+                            </span>
+
+                            <strong id="quickLocation">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Consultation
+                            </span>
+
+                            <strong id="quickFee">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="main-footer">
+
+        <p>
+            © 2026 MedCare. All rights reserved.
+        </p>
+
+        <p>
+            Demo Medical Platform
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

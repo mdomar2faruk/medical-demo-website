@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Medical Record Details - MedCare</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
+
+    <header class="main-header">
+
+        <a
+            href="dashboard.html"
+            class="logo"
+        >
+            MedCare
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="doctors.html">
+                Find Doctors
+            </a>
+
+            <a href="appointments.html">
+                Appointments
+            </a>
+
+            <a href="medical-records.html">
+                Medical Records
+            </a>
+
+            <a href="prescriptions.html">
+                Prescriptions
+            </a>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         MAIN
+    =========================================== -->
+
+    <main class="dashboard-container">
+
+
+        <!-- ======================================
+             PAGE HEADER
+        ======================================= -->
+
+        <section class="welcome-section">
+
+            <div>
+
+                <p class="welcome-label">
+                    Medical Record
+                </p>
+
+                <h1>
+                    Record Details
+                </h1>
+
+                <p>
+                    View detailed information
+                    about your medical record.
+                </p>
+
+            </div>
+
+
+            <div class="profile-avatar">
+
+                <span id="avatarLetter">
+                    U
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             RECORD DETAILS
+        ======================================= -->
+
+        <section class="dashboard-content">
+
+
+            <div class="dashboard-panel">
+
+
+                <div class="panel-header">
+
+                    <h2 id="detailTitle">
+                        Medical Record
+                    </h2>
+
+                    <a
+                        href="medical-records.html"
+                        class="panel-view-all"
+                    >
+                        ← Back to Records
+                    </a>
+
+                </div>
+
+
+
+                <div class="medical-detail-content">
+
+
+                    <!-- RECORD TYPE -->
+
+                    <div class="medical-detail-item">
+
+                        <span>
+                            Record Type
+                        </span>
+
+                        <strong id="detailType">
+                            -
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- DATE -->
+
+                    <div class="medical-detail-item">
+
+                        <span>
+                            Date
+                        </span>
+
+                        <strong id="detailDate">
+                            -
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- STATUS -->
+
+                    <div class="medical-detail-item">
+
+                        <span>
+                            Status
+                        </span>
+
+                        <strong
+                            id="detailStatus"
+                            class="medical-detail-status"
+                        >
+                            -
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div
+                        class="medical-detail-item medical-detail-full"
+                    >
+
+                        <span>
+                            Description
+                        </span>
+
+                        <p id="detailDescription">
+                            -
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- DOCTOR -->
+
+                    <div class="medical-detail-item">
+
+                        <span>
+                            Doctor
+                        </span>
+
+                        <strong id="detailDoctor">
+                            -
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- NOTES -->
+
+                    <div
+                        class="medical-detail-item medical-detail-full"
+                    >
+
+                        <span>
+                            Doctor's Notes
+                        </span>
+
+                        <p id="detailNotes">
+                            -
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="main-footer">
+
+        <p>
+            © 2026 MedCare. All rights reserved.
+        </p>
+
+        <p>
+            Demo Medical Platform
+        </p>
+
+    </footer>
+
+
+
+    <!-- ==========================================
+         DYNAMIC RECORD DETAILS
+    =========================================== -->
+
+    <script>
+
+        // ==========================================
+        // GET RECORD TYPE FROM URL
+        // ==========================================
+
+        const recordType =
+            new URLSearchParams(
+                window.location.search
+            ).get("type");
+
+
+
+        // ==========================================
+        // RECORD DETAILS DATA
+        // ==========================================
+
+        const recordDetails = {
+
+            Diagnosis: {
+
+                title:
+                    "General Medical Consultation",
+
+                type:
+                    "Diagnosis",
+
+                date:
+                    "August 10, 2026",
+
+                status:
+                    "Completed",
+
+                description:
+                    "Routine health consultation and medical assessment.",
+
+                doctor:
+                    "Not assigned",
+
+                notes:
+                    "No additional notes are available for this record."
+
+            },
+
+
+            Laboratory: {
+
+                title:
+                    "Blood Test",
+
+                type:
+                    "Laboratory",
+
+                date:
+                    "August 8, 2026",
+
+                status:
+                    "Completed",
+
+                description:
+                    "Routine blood examination and laboratory analysis.",
+
+                doctor:
+                    "Not assigned",
+
+                notes:
+                    "Laboratory results are currently available for review."
+
+            },
+
+
+            Prescription: {
+
+                title:
+                    "Medication Prescription",
+
+                type:
+                    "Prescription",
+
+                date:
+                    "August 5, 2026",
+
+                status:
+                    "Active",
+
+                description:
+                    "Prescription issued following doctor consultation.",
+
+                doctor:
+                    "Not assigned",
+
+                notes:
+                    "Please follow the prescribed medication instructions."
+
+            },
+
+
+            Visit: {
+
+                title:
+                    "Doctor Visit",
+
+                type:
+                    "Doctor Visit",
+
+                date:
+                    "August 2, 2026",
+
+                status:
+                    "Completed",
+
+                description:
+                    "Previous doctor appointment and consultation history.",
+
+                doctor:
+                    "Not assigned",
+
+                notes:
+                    "No additional notes are available for this visit."
+
+            }
+
+        };
+
+
+
+        // ==========================================
+        // SELECT RECORD
+        // ==========================================
+
+        const selectedRecord =
+            recordDetails[recordType];
+
+
+
+        // ==========================================
+        // DISPLAY RECORD
+        // ==========================================
+
+        if (selectedRecord) {
+
+            document.getElementById(
+                "detailTitle"
+            ).textContent =
+                selectedRecord.title;
+
+
+            document.getElementById(
+                "detailType"
+            ).textContent =
+                selectedRecord.type;
+
+
+            document.getElementById(
+                "detailDate"
+            ).textContent =
+                selectedRecord.date;
+
+
+            document.getElementById(
+                "detailStatus"
+            ).textContent =
+                selectedRecord.status;
+
+
+            document.getElementById(
+                "detailDescription"
+            ).textContent =
+                selectedRecord.description;
+
+
+            document.getElementById(
+                "detailDoctor"
+            ).textContent =
+                selectedRecord.doctor;
+
+
+            document.getElementById(
+                "detailNotes"
+            ).textContent =
+                selectedRecord.notes;
+
+        }
+
+    </script>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
